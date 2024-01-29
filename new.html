@@ -782,8 +782,19 @@
 
         &.light {
           background-color: #f9f9f9;
-          background-image: radial-gradient(circle, #1D196D, #0a0e23, #000);
+          background-image: radial-gradient(circle, #7c40e7, #0a0e23, #000);
           color: #fff;
+          background-size: 200% 200%;
+          animation: gradientAnimation 10s linear infinite alternate-reverse;
+        }
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
         }
       }
 
@@ -796,12 +807,12 @@
         background-color: transparent;
         border: thin solid #999;
         padding: 20px;
-        width: 60vw; 
+        width: 60vw;
         text-align: center;
         outline: none;
         color: white;
         font-size: 20px;
-        
+
         &::placeholder {
           color: #ccc;
         }
@@ -2194,7 +2205,11 @@
     <div class="section light">
       <h2>Get in touch</h2>
       <input class="input" placeholder="Enter your name" type="text" />
-      <textarea class="input" placeholder="Enter your message" rows="6"></textarea>
+      <textarea
+        class="input"
+        placeholder="Enter your message"
+        rows="6"
+      ></textarea>
       <button class="submit">Submit</button>
     </div>
     <div class="section dark">
